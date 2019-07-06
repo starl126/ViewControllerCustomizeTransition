@@ -1,24 +1,24 @@
 //
-//  LXPresentInteractivie.m
+//  LXPopInteractive.m
 //  ControllerTransitionDemo
 //
-//  Created by 天边的星星 on 2019/7/5.
+//  Created by 天边的星星 on 2019/7/6.
 //  Copyright © 2019 starxin. All rights reserved.
 //
 
-#import "LXPresentInteractive.h"
+#import "LXPopInteractive.h"
 
-@interface LXPresentInteractive ()
+@interface LXPopInteractive ()
 
 @property (nonatomic, weak) UIViewController* toViewController;
-@property (nonatomic, assign) CGPoint startP;
 @property (nonatomic, assign, getter=isCompleted) BOOL completed;
+@property (nonatomic, assign) CGPoint startP;
 
 @end
 
-@implementation LXPresentInteractive
+@implementation LXPopInteractive
 
-- (void)setPresentInteractiveToController:(UIViewController*)toViewController {
+- (void)setPopInteractiveToController:(UIViewController*)toViewController {
     self.toViewController = toViewController;
     [self p_preparePanGestureInView:toViewController.view];
 }
@@ -31,37 +31,36 @@
     switch (pan.state) {
         case UIGestureRecognizerStateBegan:
         {
-            self.startP = [pan locationInView:self.toViewController.view];
+            self.startP = [pan locationInView:self.toViewController.view.superview];
             self.interacting = YES;
-            if (self.delegate && [self.delegate respondsToSelector:@selector(presentInteractiveDidBegin:)]) {
-                [self.delegate presentInteractiveDidBegin:self];
-            }
+            [self.toViewController.navigationController popViewControllerAnimated:YES];
         }
             break;
         case UIGestureRecognizerStateChanged:
         {
-            CGPoint currentP = [pan locationInView:self.toViewController.view];
+            CGPoint currentP = [pan locationInView:self.toViewController.view.superview];
             CGFloat fraction = (currentP.y-self.startP.y)/100.0;
             fraction = fminf(fmaxf(0.0, fraction),1.0);
             self.completed = (fraction>0.5);
+            NSLog(@"fraction=%.3f",fraction);
             [self updateInteractiveTransition:fraction];
         }
             break;
         case UIGestureRecognizerStateFailed:
         case UIGestureRecognizerStateCancelled:
         {
-            self.interacting = NO;
             [self cancelInteractiveTransition];
+            self.interacting = NO;
         }
             break;
         case UIGestureRecognizerStateEnded:
         {
-            self.interacting = NO;
             if (self.isCompleted) {
                 [self finishInteractiveTransition];
             }else {
                 [self cancelInteractiveTransition];
             }
+            self.interacting = NO;
         }
             break;
         default:

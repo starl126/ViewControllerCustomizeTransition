@@ -1,14 +1,14 @@
 //
-//  LXPresentInteractivie.m
+//  LXShowInteractive.m
 //  ControllerTransitionDemo
 //
-//  Created by 天边的星星 on 2019/7/5.
+//  Created by 天边的星星 on 2019/7/6.
 //  Copyright © 2019 starxin. All rights reserved.
 //
 
-#import "LXPresentInteractive.h"
+#import "LXShowInteractive.h"
 
-@interface LXPresentInteractive ()
+@interface LXShowInteractive ()
 
 @property (nonatomic, weak) UIViewController* toViewController;
 @property (nonatomic, assign) CGPoint startP;
@@ -16,9 +16,9 @@
 
 @end
 
-@implementation LXPresentInteractive
+@implementation LXShowInteractive
 
-- (void)setPresentInteractiveToController:(UIViewController*)toViewController {
+- (void)setShowGestureToController:(UIViewController*)toViewController {
     self.toViewController = toViewController;
     [self p_preparePanGestureInView:toViewController.view];
 }
@@ -33,8 +33,8 @@
         {
             self.startP = [pan locationInView:self.toViewController.view];
             self.interacting = YES;
-            if (self.delegate && [self.delegate respondsToSelector:@selector(presentInteractiveDidBegin:)]) {
-                [self.delegate presentInteractiveDidBegin:self];
+            if (self.delegate && [self.delegate respondsToSelector:@selector(showInteractiveDidBegin:)]) {
+                [self.delegate showInteractiveDidBegin:self];
             }
         }
             break;

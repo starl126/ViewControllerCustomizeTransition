@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "LXMainController.h"
+#import "LXBaseNavController.h"
+#import "LXRootController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -25,7 +27,9 @@
         LXMainController* mainVc = [[LXMainController alloc] init];
         [self presentViewController:mainVc animated:YES completion:nil];
     }else {//show
-        
+        LXRootController* root = [[LXRootController alloc] init];
+        LXBaseNavController* nav = [[LXBaseNavController alloc] initWithRootViewController:root];
+        [self presentViewController:nav animated:YES completion:nil];
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

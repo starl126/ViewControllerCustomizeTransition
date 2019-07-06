@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0408A322D0489000CE6186 /* LXBaseNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0408A222D0489000CE6186 /* LXBaseNavController.m */; };
+		4B0408A622D0493D00CE6186 /* LXRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0408A522D0493D00CE6186 /* LXRootController.m */; };
+		4B0408A922D049E000CE6186 /* LXShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0408A822D049E000CE6186 /* LXShowController.m */; };
+		4B0408AC22D04D1E00CE6186 /* LXShowAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0408AB22D04D1E00CE6186 /* LXShowAnimation.m */; };
+		4B0408AF22D04D3100CE6186 /* LXPopAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0408AE22D04D3100CE6186 /* LXPopAnimation.m */; };
+		4B0408B222D04D5500CE6186 /* LXShowInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0408B122D04D5500CE6186 /* LXShowInteractive.m */; };
+		4B0408B522D04D6400CE6186 /* LXPopInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B0408B422D04D6400CE6186 /* LXPopInteractive.m */; };
 		4BB0178022CF38A900EF6F7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0177F22CF38A900EF6F7F /* AppDelegate.m */; };
 		4BB0178322CF38A900EF6F7F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BB0178222CF38A900EF6F7F /* ViewController.m */; };
 		4BB0178622CF38A900EF6F7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BB0178422CF38A900EF6F7F /* Main.storyboard */; };
@@ -41,6 +48,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B0408A122D0489000CE6186 /* LXBaseNavController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXBaseNavController.h; sourceTree = "<group>"; };
+		4B0408A222D0489000CE6186 /* LXBaseNavController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXBaseNavController.m; sourceTree = "<group>"; };
+		4B0408A422D0493D00CE6186 /* LXRootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXRootController.h; sourceTree = "<group>"; };
+		4B0408A522D0493D00CE6186 /* LXRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXRootController.m; sourceTree = "<group>"; };
+		4B0408A722D049E000CE6186 /* LXShowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXShowController.h; sourceTree = "<group>"; };
+		4B0408A822D049E000CE6186 /* LXShowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXShowController.m; sourceTree = "<group>"; };
+		4B0408AA22D04D1E00CE6186 /* LXShowAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXShowAnimation.h; sourceTree = "<group>"; };
+		4B0408AB22D04D1E00CE6186 /* LXShowAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXShowAnimation.m; sourceTree = "<group>"; };
+		4B0408AD22D04D3100CE6186 /* LXPopAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPopAnimation.h; sourceTree = "<group>"; };
+		4B0408AE22D04D3100CE6186 /* LXPopAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPopAnimation.m; sourceTree = "<group>"; };
+		4B0408B022D04D5500CE6186 /* LXShowInteractive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXShowInteractive.h; sourceTree = "<group>"; };
+		4B0408B122D04D5500CE6186 /* LXShowInteractive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXShowInteractive.m; sourceTree = "<group>"; };
+		4B0408B322D04D6400CE6186 /* LXPopInteractive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXPopInteractive.h; sourceTree = "<group>"; };
+		4B0408B422D04D6400CE6186 /* LXPopInteractive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXPopInteractive.m; sourceTree = "<group>"; };
 		4BB0177B22CF38A900EF6F7F /* ControllerTransitionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControllerTransitionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB0177E22CF38A900EF6F7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BB0177F22CF38A900EF6F7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -97,6 +118,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B0408A022D047E900CE6186 /* Show */ = {
+			isa = PBXGroup;
+			children = (
+				4B0408A122D0489000CE6186 /* LXBaseNavController.h */,
+				4B0408A222D0489000CE6186 /* LXBaseNavController.m */,
+				4B0408A422D0493D00CE6186 /* LXRootController.h */,
+				4B0408A522D0493D00CE6186 /* LXRootController.m */,
+				4B0408A722D049E000CE6186 /* LXShowController.h */,
+				4B0408A822D049E000CE6186 /* LXShowController.m */,
+				4B0408AA22D04D1E00CE6186 /* LXShowAnimation.h */,
+				4B0408AB22D04D1E00CE6186 /* LXShowAnimation.m */,
+				4B0408AD22D04D3100CE6186 /* LXPopAnimation.h */,
+				4B0408AE22D04D3100CE6186 /* LXPopAnimation.m */,
+				4B0408B022D04D5500CE6186 /* LXShowInteractive.h */,
+				4B0408B122D04D5500CE6186 /* LXShowInteractive.m */,
+				4B0408B322D04D6400CE6186 /* LXPopInteractive.h */,
+				4B0408B422D04D6400CE6186 /* LXPopInteractive.m */,
+			);
+			path = Show;
+			sourceTree = "<group>";
+		};
 		4BB0177222CF38A900EF6F7F = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				4BB017B322CF700700EF6F7F /* Modal */,
+				4B0408A022D047E900CE6186 /* Show */,
 				4BB0177E22CF38A900EF6F7F /* AppDelegate.h */,
 				4BB0177F22CF38A900EF6F7F /* AppDelegate.m */,
 				4BB0178122CF38A900EF6F7F /* ViewController.h */,
@@ -303,14 +346,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B0408AF22D04D3100CE6186 /* LXPopAnimation.m in Sources */,
+				4B0408A622D0493D00CE6186 /* LXRootController.m in Sources */,
 				4BB017BC22CF713900EF6F7F /* LXPresentAnimation.m in Sources */,
+				4B0408B222D04D5500CE6186 /* LXShowInteractive.m in Sources */,
 				4BB0178322CF38A900EF6F7F /* ViewController.m in Sources */,
+				4B0408A322D0489000CE6186 /* LXBaseNavController.m in Sources */,
 				4BB017C522CF718F00EF6F7F /* LXDismissInteractive.m in Sources */,
 				4BB0178E22CF38AB00EF6F7F /* main.m in Sources */,
+				4B0408A922D049E000CE6186 /* LXShowController.m in Sources */,
+				4B0408AC22D04D1E00CE6186 /* LXShowAnimation.m in Sources */,
 				4BB017B622CF70AC00EF6F7F /* LXMainController.m in Sources */,
 				4BB017BF22CF714D00EF6F7F /* LXDismissAnimation.m in Sources */,
 				4BB0178022CF38A900EF6F7F /* AppDelegate.m in Sources */,
 				4BB017C222CF716700EF6F7F /* LXPresentInteractive.m in Sources */,
+				4B0408B522D04D6400CE6186 /* LXPopInteractive.m in Sources */,
 				4BB017B922CF70D700EF6F7F /* LXModalController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

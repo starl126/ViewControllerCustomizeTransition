@@ -56,7 +56,7 @@
     _dismissInteractive = [LXDismissInteractive new];
     
     _presentInteractive.delegate = self;
-    [_presentInteractive setInteractiveGestureToController:self];
+    [_presentInteractive setPresentInteractiveToController:self];
 }
 - (void)p_actionForClickPresentButton:(UIButton*)sender {
     LXModalController* modalVc = [[LXModalController alloc] init];

@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///是否正在交互中
 @property (nonatomic, assign) BOOL interacting;
 ///创建交互手势
-- (void)setInteractiveGestureToController:(UIViewController*)toViewController;
+- (void)setPresentInteractiveToController:(UIViewController*)toViewController;
 @property (nonatomic, weak) id<LXPresentInteractiveDelegate> delegate;
 
 @end
