@@ -1,0 +1,18 @@
+//
+//  TransitionPrefixHeader.pch
+//  ControllerTransitionDemo
+//
+//  Created by 天边的星星 on 2019/7/5.
+//  Copyright © 2019 starxin. All rights reserved.
+//
+
+#ifndef TransitionPrefixHeader_pch
+#define TransitionPrefixHeader_pch
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#else
+
+#endif
+
+#endif /* TransitionPrefixHeader_pch */
