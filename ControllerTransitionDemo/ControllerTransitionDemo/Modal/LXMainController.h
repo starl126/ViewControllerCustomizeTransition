@@ -7,7 +7,9 @@
 //
 
 NS_ASSUME_NONNULL_BEGIN
-
+/**
+ 更多控制器交互可参考github：https://github.com/ColinEberhardt/VCTransitionsLibrary.git
+ */
 @interface LXMainController : UIViewController
 
 @end
