@@ -40,6 +40,14 @@
     [button setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
     [button addTarget:self action:@selector(p_actionForClickPresentButton:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    UIButton *back = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    back.backgroundColor = UIColor.purpleColor;
+    back.frame = CGRectMake(20.0, 44.0, 40.0, 30.0);
+    [back setTitle:@"back" forState:UIControlStateNormal];
+    [back setTitleColor:UIColor.blackColor forState:UIControlStateNormal];
+    [back addTarget:self action:@selector(p_actionForClickBackButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:back];
 }
 - (void)p_prepareTransitionConfiguration {
     _presentAnimation = [LXPresentAnimation new];
@@ -56,6 +64,9 @@
     modalVc.modalDelegate = self;
     [self presentViewController:modalVc animated:YES completion:nil];
     [_dismissInteractive setDismissInteractiveToController:modalVc];
+}
+- (void)p_actionForClickBackButton:(UIButton*)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 #pragma mark --- LXModalControllerDelegate
 - (void)modalViewControllerDidClickDismissButton:(LXModalController *)modelController {
